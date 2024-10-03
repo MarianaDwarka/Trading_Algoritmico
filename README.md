@@ -17,12 +17,12 @@ El objetivo del proyecto es desarrollar un sistema de trading algorítmico que e
    - **Máquina Virtual (Azure VM1)**: Todo el procesamiento de los datos ocurre en una máquina virtual que ejecuta Python. En esta fase, los datos se limpian y estructuran para el análisis posterior.
    - **Preprocesamiento**: Los datos se preparan para análisis técnico, y se trabaja tanto con datos históricos para backtesting como con datos en tiempo real para la ejecución de trades.
 
-     **Implementación de la Estrategia de Trading**:
+   - **Implementación de la Estrategia de Trading**:
       - **Cruce de Medias Móviles (SMA 50/200)**: La estrategia principal se basa en el cruce de medias móviles de diferentes periodos (50 y 200) para generar señales de compra y venta.
       - **TA-Lib**: Utilización de la biblioteca `TA-Lib` para realizar análisis técnico sobre los datos financieros. Esta librería facilita el cálculo de indicadores como las medias móviles.
       - **Backtesting**: Se realiza una prueba retrospectiva de la estrategia con datos históricos, usando la biblioteca `backtesting`. Se utilizan 100 días de datos con granularidad de una hora y se incluyen comisiones del 0.15% para simular un entorno realista.
    
-     **Ajuste de Parámetros**:
+   - **Ajuste de Parámetros**:
       - **Optimización**: Tras el backtesting inicial, se optimizan los parámetros de las medias móviles para mejorar el rendimiento de la estrategia. Estos parámetros ajustados son probados nuevamente para compararlos con los resultados originales.
   
 3. **Almacenamiento en MySQL**:
