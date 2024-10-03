@@ -52,7 +52,7 @@ El objetivo del proyecto es desarrollar un sistema de trading algorítmico que e
 * **Paso 4:** Ejecutar los archivos:
    * El archivo `Back_Broker_EURUSD.ipynb` es un notebook en el cual se hace el backtesting de la estrategia, se comienza con un cruce de SMA's de 50 y 200 periodos. Después, tras hacer la optimización de parámetros se ajusta el cruce de SMA's a 30 y 220 con una muestra de 100 días y una granularidad de una hora
    * El archivo `Cruce_SMA_30_Y_220.ipynb` es un notebook en el cual se implementa la estrategia de trading con los parámetros ajustados y ademas se hace la conexión con la base de datos
-   *  El archivo `trading_automatizado.ipynb` es un script de python en el cual se hace la automatización de todo lo establecido en los dos notebooks anteriores, además de fijar el final de la ejecución con base en alguna fecha elegida.
+   *  El archivo `trading_automatizado.ipynb` es un script de python en el cual se hace la automatización de todo lo establecido en los dos notebooks anteriores, además de fijar el final de la ejecución con base en alguna fecha elegida. Este sería el archivo que se queda ejecutando en la Azure VM por el tiempo determinado.
 
 ---
 
