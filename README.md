@@ -3,7 +3,7 @@
 ---
 
 ### **Objetivo**:
-El objetivo del proyecto es desarrollar un sistema de trading algorítmico que emule el ciclo de vida de los datos de mercado, desde su extracción hasta su análisis y ejecución de operaciones en tiempo real. Este sistema se conecta a un broker mediante una API para obtener datos de mercado, procesarlos en una máquina virtual alojada en Azure y ejecutar trades automáticos basados en una estrategia de cruces de medias móviles simples (SMA's). Los datos resultantes son almacenados en una base de datos MySQL en Azure, permitiendo ajustes posteriores de los parámetros estratégicos utilizando Python.
+El objetivo del proyecto es desarrollar un sistema de trading algorítmico que emule el ciclo de vida de los datos de mercado, desde su extracción hasta su análisis y ejecución de operaciones en tiempo real, el particular se trabajará con el par EUR/USD. Este sistema se conecta a un broker (OANDA) mediante una API para obtener datos de mercado, procesarlos en una máquina virtual alojada en Azure y ejecutar trades automáticos basados en una estrategia de cruces de medias móviles simples (SMA's). Los datos resultantes son almacenados en una base de datos MySQL en Azure, permitiendo ajustes posteriores de los parámetros estratégicos utilizando Python.
 
 ![Esquema de Trading Algorítmico](./esquema.png)
 
@@ -35,6 +35,24 @@ El objetivo del proyecto es desarrollar un sistema de trading algorítmico que e
 
 5. **Visualización**:
    - **Python para Visualización**: Los resultados y métricas clave de los trades ejecutados, junto con los datos almacenados en la base de datos, se visualizan y analizan mediante Python, lo que permite ajustes adicionales en los parámetros y la estrategia.
+
+---
+
+## ¿Cómo se utilizan los archivos?
+
+* **Paso 1:** Crear una cuenta en el broker de oanda y conectarse a la API.
+* **Paso 2:** Llenar el archivo `oanda.cfg` con la informacion recibida en el paso 1
+* **Paso 3:** Instalación de la biblioteca `tpqoa` con los siguientes comandos: 
+   ```conda update anaconda (recomendado)
+   conda install ujson
+   pip install v20
+   (En algunos casos: pip install pyyaml)
+   pip install --upgrade git+https://github.com/yhilpisch/tpqoa.git
+   ```
+* **Paso 4:** Ejecutar los archivos:
+   * El archivo `Back_Broker_EURUSD.ipynb` es un notebook en el cual se hace el backtesting de la estrategia, se comienza con un cruce de SMA de 50 y 200 y tras hacer la optimización de parámetros se ajusta el cruce de SMA's a 30 y 220 con una muestra de 100 días y una granularidad de una hora
+   * El archivo `Cruce_SMA_30_Y_220.ipynb` es un notebook en el cual se implementa la estrategia de trading con los parámetros ajustados y ademas se hace la conexión con la base de datos
+   *  El archivo `trading_automatizado.ipynb` es un script de python en el cual se hace la automatización de todo lo establecido en los dos notebooks anteriores, además de fijar el final de la ejecución con base en alguna fecha elegida.
 
 ---
 
