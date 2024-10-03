@@ -26,7 +26,7 @@ El objetivo del proyecto es desarrollar un sistema de trading algorítmico que e
       - **Optimización**: Tras el backtesting inicial, se optimizan los parámetros de las medias móviles para mejorar el rendimiento de la estrategia. Estos parámetros ajustados son probados nuevamente para compararlos con los resultados originales.
   
 3. **Almacenamiento en MySQL**:
-   - **Base de Datos MySQL en Azure**: Todos los datos procesados se almacenan en una base de datos MySQL en Azure para su posterior análisis. Esta base de datos es accesible desde una computadora local mediante MySQL Workbench.
+   - **Base de Datos MySQL en Azure**: Todos los datos procesados se almacenan en una base de datos MySQL en Azure para su posterior análisis. Esta base de datos es accesible desde una computadora local mediante MySQL Workbench. Se utiliza la biblioteca `sqlalchemy`
    - **Real-time Data Storage**: Los datos son almacenados de forma continua, permitiendo un acceso inmediato para ajustar los parámetros de la estrategia.
 
 4. **Ejecución en Tiempo Real**:
