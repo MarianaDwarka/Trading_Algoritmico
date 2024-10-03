@@ -43,10 +43,11 @@ El objetivo del proyecto es desarrollar un sistema de trading algorítmico que e
 * **Paso 1:** Crear una cuenta en el broker de oanda y conectarse a la API.
 * **Paso 2:** Llenar el archivo `oanda.cfg` con la informacion recibida en el paso 1
 * **Paso 3:** Instalación de la biblioteca `tpqoa` con los siguientes comandos: 
-   ```conda update anaconda (recomendado)
+   ```python
+   conda update anaconda (recomendado)
    conda install ujson
    pip install v20
-   (En algunos casos: pip install pyyaml)
+   #(En algunos casos: pip install pyyaml)
    pip install --upgrade git+https://github.com/yhilpisch/tpqoa.git
    ```
 * **Paso 4:** Ejecutar los archivos:
