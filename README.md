@@ -5,6 +5,9 @@
 ### **Objetivo**:
 El objetivo del proyecto es desarrollar un sistema de trading algorítmico que emule el ciclo de vida de los datos de mercado, desde su extracción hasta su análisis y ejecución de operaciones en tiempo real. Este sistema se conecta a un broker mediante una API para obtener datos de mercado, procesarlos en una máquina virtual alojada en Azure y ejecutar trades automáticos basados en una estrategia de cruces de medias móviles simples (SMA's). Los datos resultantes son almacenados en una base de datos MySQL en Azure, permitiendo ajustes posteriores de los parámetros estratégicos utilizando Python.
 
+![Esquema de Trading Algorítmico](./esquema.png)
+
+
 ### **Componentes del Sistema**:
 1. **Fuente de Datos y Extracción**:
    - **API de Broker (OANDA)**: Se utiliza la API de OANDA para obtener datos de mercado en tiempo real, que son la base para el análisis y ejecución de las operaciones.
